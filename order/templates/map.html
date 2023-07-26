@@ -18,22 +18,24 @@
         <option value="TRANSIT">大眾交通運輸</option>
       </select>
     </div>
-    <div id="map"></div>
 
+    <!--(23-27)不能改-->
+    <div id="map"></div>
     <script
       src="https://maps.googleapis.com/maps/api/js?key={{google_api_key}}&callback=initMap&v=weekly"
       defer
     ></script>
+    <!--(23-27)不能改-->
 
     <!--CSS 可以改地圖大小-->
     <style>
         #map {
-            height: 100%;  /* 改地圖大小 */
+            height: 100%; <!--改地圖大小-->
             top: 10%;
         }
         html,
         body {
-            width: 80%;   /*改整體大小*/
+            width: 80%; <!--改整體大小-->
             height: 80%;
             margin: 0;
             padding: 0;
@@ -107,6 +109,7 @@
             })
             .catch((e) => window.alert("由於以下原因，路線請求失敗:" + status));
         }
+
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
           infoWindow.setPosition(pos);
           infoWindow.setContent(
