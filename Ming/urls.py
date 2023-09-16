@@ -22,26 +22,27 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/',views.test),
     path('map/',views.map),
-
+    path('getMyloc/',views.getMyloc),
+    
     ### homepage
     path('',views.index),
-
+    
     path('TWmap/',views.TWmap),
     ### about
     path('about/', views.about),
     path('index_test/', views.index_test),
 
-    ### birdlist
-    path('birdlist/', views.birdlist),
+    ### birdlist 
+    path('birdlist/', views.birdlist), 
     path('birdinfo/<int:sortType>/', views.birdinfo),
 
-    ### guide
+    ### guide 
     path('guide/', views.guide),
     path('basicKnowledge/', views.basicKnowledge),
     path('development/', views.development),
     path('equipment/', views.equipment),
     path('ethics/', views.ethics),
-
+    
     ### realtime
     path('realtime/', views.realtime),
     path('info/', views.info),
@@ -50,4 +51,5 @@ urlpatterns = [
 
     #### database
     path('order/', views.order),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('upload_img/', views.upload_img),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
